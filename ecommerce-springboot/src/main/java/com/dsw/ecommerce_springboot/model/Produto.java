@@ -1,30 +1,26 @@
 package com.dsw.ecommerce_springboot.model;
 
-
+import java.math.BigDecimal;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
-
-@Entity
-public class Cliente {
+public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
+    private Long id;
 
     @NotBlank
     private String nome;
 
-    @Email
-    @NotBlank
-    private String email;
+    @DecimalMin("0.01")
+    private BigDecimal preco;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -36,14 +32,15 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String  getEmail() {
-        return email;
+    public BigDecimal getPreco() {
+        return preco;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
     }
 
     
-    
+
+
 }
