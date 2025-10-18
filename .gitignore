@@ -1,0 +1,26 @@
+# Build
+/target/
+/build/
+
+# IDEs
+/.idea/
+/*.iml
+*.classpath
+*.project
+*.settings/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle wrapper
+gradle/wrapper/gradle-wrapper.jar
+
+# Spring Boot properties sensitive
+application.properties
+application.yml
