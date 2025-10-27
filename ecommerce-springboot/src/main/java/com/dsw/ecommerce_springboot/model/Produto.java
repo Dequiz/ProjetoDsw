@@ -2,18 +2,21 @@ package com.dsw.ecommerce_springboot.model;
 
 import java.math.BigDecimal;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotBlank;
 
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+    @NotBlank(message=" O nome do produto é obrigatório ")
     private String nome;
 
-    @DecimalMin("0.01")
+    @DecimalMin(value = "0.01", inclusive = false, message=" O preço deve ser maior que zero ")
     private BigDecimal preco;
 
     public Long getId() {

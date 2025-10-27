@@ -2,8 +2,12 @@ package com.dsw.ecommerce_springboot.model;
 
 
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 
 @Entity
@@ -13,11 +17,11 @@ public class Cliente {
     private long id;
 
 
-    @NotBlank
+    @NotBlank(message=" O nome é obrigatório ")
     private String nome;
 
     @Email
-    @NotBlank
+    @NotBlank(message=" O email é obrigatório ")
     private String email;
 
     public long getId() {
