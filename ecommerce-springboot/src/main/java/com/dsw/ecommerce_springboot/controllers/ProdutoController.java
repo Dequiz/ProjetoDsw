@@ -20,7 +20,7 @@ import com.dsw.ecommerce_springboot.repository.ProdutoRepositorio;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/produtor")
+@RequestMapping("/api/produtos")
 public class ProdutoController {
 
     @Autowired
