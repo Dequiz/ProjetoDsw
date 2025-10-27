@@ -1,4 +1,4 @@
-const form = document.getElementById('productForm');
+const form = document.getElementById('form');
 const list = document.getElementById('list');
 
 form.addEventListener('submit', async (e) => {
